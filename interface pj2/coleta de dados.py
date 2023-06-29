@@ -12,7 +12,7 @@ class Telapy:
         ]
         
         # Janela
-        Janela = sg.Window("Dados do Usuario").Layoud(Layout)
+        Janela = sg.Window("Dados do Usuario").Layout(Layout)
         # Extrair dados da tela
         eventos, valores = Janela.Read()
 
