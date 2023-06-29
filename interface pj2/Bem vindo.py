@@ -8,6 +8,6 @@ class Telapy:
             [sg.Button('Entrar')]
         ]
         # Janela
-        Janela = sg.Window("Botao de entrada ").Layoud(Layout)
+        Janela = sg.Window("Botao de entrada ").Layout(Layout)
         
         self.button= Janela.Read()
