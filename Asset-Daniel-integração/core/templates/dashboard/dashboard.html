@@ -1,0 +1,21 @@
+<!-- dashboard/dashboard.html -->
+{% extends 'dashboard/baseDashboard.html' %}
+
+{% block title %}Sistema ETE{% endblock %}
+
+{% block content %}
+
+    <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+        <div style="text-align: center;">
+            <a href="/dashboard/armazenamento">
+                <img src="https://i.ibb.co/BwcYPqb/Armazenamento-da-gua-para-reuso.png" alt="Dashboard de Armazenamento" style="width: 300px; height: 200px;">
+                <p>Clique para acessar o Dashboard de Armazenamento</p>
+            </a>
+            <a href="/dashboard/gradeamento">
+                <img src="https://i.ibb.co/N3LsG9x/Captura-de-tela-2023-08-04-143544.png" alt="Monitoramento do Tanque de Gradeamento" style="width: 300px; height: 200px;">
+                <p>Clique para acessar o Tanque de Gradeamento</p>
+            </a>
+        </div>
+    </div>
+
+{% endblock %}
