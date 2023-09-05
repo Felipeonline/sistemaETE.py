@@ -2,6 +2,7 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
+from .models import ARMAZENAMENTO_1, ARMAZENAMENTO_2, GRADEAMENTO_1,GRADEAMENTO_2
 
 def login_view(request):
     if request.method == 'POST':
@@ -56,6 +57,22 @@ def armazenamento_view(request):
 @login_required
 def gradeamento_view(request):
     return render(request, 'dashboard/gradeamento/dashboardgradeamento.html')
+
+def ARMAZENAMENTO_1List(request):
+    ARMAZENAMENTO_1= ARMAZENAMENTO_1.objects.all()
+    return render(request, 'core/dashboardarmazenamento.html',{'ARMAZENAMENTO_1':ARMAZENAMENTO_1})
+def ARMAZENAMENTO_2List(request):
+    ARMAZENAMENTO_2= ARMAZENAMENTO_2.objects.all()
+    return render(request, 'core/dashboardarmazenamento.html',{'ARMAZENAMENTO_2':ARMAZENAMENTO_2})
+
+def  GRADEAMENTO_1List(request):
+    GRADEAMENTO_1= GRADEAMENTO_1.objects.all()
+    return render(request, 'core/dashboardgradeamento.html',{' GRADEAMENTO_1': GRADEAMENTO_1})
+def GRADEAMENTO_2List(request):
+    GRADEAMENTO_2= GRADEAMENTO_2.objects.all()
+    return render(request, 'core/dashboardgradeamento.html',{'GRADEAMENTO_2':GRADEAMENTO_2})
+
+
 
 
 
